@@ -6,8 +6,11 @@
 
     <groupId>com.github.frameworkium</groupId>
     <artifactId>frameworkium-reporting</artifactId>
-    <version>1.0</version>
-
+    <version>3.0-BETA1</version>
+    <name>frameworkium-base</name>
+    <description>
+        Frameworkium project for providing test reports post execution
+    </description>
 
     <dependencies>
         <dependency>
@@ -67,6 +70,7 @@
                     </properties>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -78,6 +82,11 @@
         </plugins>
     </build>
 
-
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
 </project>

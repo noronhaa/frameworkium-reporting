@@ -8,6 +8,11 @@ import java.nio.file.Path;
 
 public class AllureScreenshotHelper {
 
+    /**
+     * Add a screenshot to an allure test report
+     * @param name of screenshot
+     * @param content path to screenshot
+     */
    public void addScreenshotToAllureIfUsing(String name, Path content){
        try (InputStream is = Files.newInputStream(content)) {
            Allure.addAttachment(name, is);

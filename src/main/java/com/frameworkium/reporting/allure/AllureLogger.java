@@ -31,6 +31,11 @@ public class AllureLogger {
         logger.debug("Logged to allure: " + message);
     }
 
+
+    /**
+     * Register the start of a 'Step' to Allure report
+     * @param stepName name of the step to parse to Allure report
+     */
     public static void stepStart(String stepName) {
         StepResult result = new StepResult().withName(stepName);
         String uuid = UUID.randomUUID().toString();
@@ -38,6 +43,9 @@ public class AllureLogger {
         STEP_UUID_STACK.get().addFirst(uuid);
     }
 
+    /**
+     * Register to Allure report that a 'Step' has finished
+     */
     public static void stepFinish() {
         getLifecycle().stopStep(STEP_UUID_STACK.get().pop());
     }
